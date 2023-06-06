@@ -4,27 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Body Mass Index Calculator</title>
 </head>
 <body>
+  <header>
+    <div id="title">
+      <img src=".assets/images/logo.svg" alt="logo">
+      <h1>Body Mass Index Calculator</h1>
+      <p>Better understand your weight in relation to your height using our 
+        body mass index (BM) calculator. While BMI is not the sole determinant 
+        of a healthy weight, it offers a valuable starting point to evaluate 
+        your overall health and well-being.</p>
+    </div>
 
-  Body Mass Index Calculator
+    <div class="card">
+      <h2>Enter your details below</h2>
+    </div>
 
-  Better understand your weight in relation to your height using our 
-  body mass index (BM) calculator. While BMI is not the sole determinant 
-  of a healthy weight, it offers a valuable starting point to evaluate 
-  your overall health and well-being.
+    <div id="radios">
+      <label class="radio-label" for="option1">
+      <input type="radio" name="card-option" id="option1" class="radio-input" value="option1" checked>
+      Metric
+      </label>
+      <label class="radio-label" for="option2">
+        <input type="radio" name="card-option" id="option2" class="radio-input" value="option2" checked>
+        Imperial
+        </label>
+      </div>
+ 
+      <div class="input-group" id="inputGroup1">
+        <div id="metric">
+          <div id="height">
+            <p>Height</p>
+            <input id="height" type="number" min="0" placeholder="0">
+            <span class="cmm"></span>
+          </div>
+          <div id="weight">
+            <p>Weight</p>
+            <input id="weight" type="number" min="0" placeholder="0">
+            <span class="kgg"></span>
+          </div>
+        </div>
+      <button onClick="calculateBMI()" id="submit-btn">
+        <h2>Welcome!</h2>
+        <p>Enter your height and weight and you'll see your BMI result here</p>
+      </button>
+      </div>
 
-  Enter your details below
+      <div class="input-group" id="inputGroup2">
+        <div id="imperial">
+        <p>Height</p>
+          <div id="height-imp">
+            <input id="height-ft" type="number" min="0" placeholder="0">
+            <span class="ft"></span>
+            <input id="height-in" type="number" min="0" placeholder="0">
+            <span class="in"></span>
+          </div>
+          <div id="weight-imp">
+            <p>Weight</p>
+            <input id="weight-st" type="number" min="0" placeholder="0">
+            <span class="st"></span>
+            <input id="wei6ght-lbs" type="number" min="0" placeholder="0">
+            <span class="lbs"></span>
+          </div>
+        </div>
+      <button onClick="calculateBMIIMP()" id="submit-btn-imp">
+        <h2>Welcome!</h2>
+        <p>Enter your height and weight and you'll see your BMI result here</p>
+      </button>
+      </div>
 
-  Metric
-  Imperial
 
-  Height
-  Weight
-
+    </header>
+  
   Your BMI is...
 
   <!-- add score -->
