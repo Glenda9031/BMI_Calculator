@@ -4,33 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | Body Mass Index Calculator</title>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="header-details">
+        <img src="images/logo.svg" alt="compnny logo" class="logo">
+        <div class="header-information">
+          <h1>Body Mass Index Calculator</h1>
+          <p>Better understand your weight in relation to your height using our 
+            body mass index (BM) calculator. While BMI is not the sole determinant 
+            of a healthy weight, it offers a valuable starting point to evaluate 
+            your overall health and well-being.</p>
+          </div>
+      </div>
+      
+      <form class="card">
+        <h4>Enter your details below</h4>
 
-  Body Mass Index Calculator
+        <div class="units">
+          <label for="metric">
+            <input type="radio" name="unit" id="metric">Metric
+          </label>
 
-  Better understand your weight in relation to your height using our 
-  body mass index (BM) calculator. While BMI is not the sole determinant 
-  of a healthy weight, it offers a valuable starting point to evaluate 
-  your overall health and well-being.
+          <label for="imperial">
+            <input type="radio" name="unit" id="imperial">Imperial
+          </label>
+        </div>
 
-  Enter your details below
+        <div class="measurements metric">
+          <label for="height">
+          <span>Height</span>
+          <div class="input">
+            <input type="number" name="height" id="heightCM" autocomplete="off">
+            <label for="height">cm</label>
+          </div>
+          </label>
 
-  Metric
-  Imperial
+          <label for="weight">
+            <span>Weight</span>
+            <div class="input">
+              <input type="number" name="weight" id="weightKG" autocomplete="off">
+              <label for="height">kg</label>
+            </div>
+            </label>
+          </div>
 
-  Height
-  Weight
+          <div class="measurements imperial hidden">
+            <label for="height">
+            <span>Height</span>
+            <div class="flex-wrapper">
+            <div class="input">
+              <input type="number" name="height" id="heightFT" autocomplete="off">
+              <label for="height">ft</label>
+            </div>
+ 
+            <div class="input">
+              <input type="number" name="height" id="heightIN" autocomplete="off">
+              <label for="height">in</label>
+            </div>
+          </div>
+          </label>
+  
+          <label for="weight">
+            <span>Weight</span>
+            <div class="flex-wrapper">
+              <div class="input">
+              <input type="number" name="weight" id="weightST" autocomplete="off">
+              <label for="weight">st</label>
+            </div>
+ 
+            <div class="input">
+              <input type="number" name="weight" id="weightLBS" autocomplete="off">
+              <label for="weight">lbs</label>
+            </div>
+          </div>
+          </label>
+        </div>
 
-  Your BMI is...
+        <div class="results-card outcome hidden">
+          <div class="bmi-score">
+            <p><strong>Your BMI is...</strong></p>
+            <p class="results"></p>
+          </div>
 
-  <!-- add score -->
+          <p class="results-summary">
+            Your BMI suggests you're...<span class="clarification"><!-- add classification -->.</span>Your ideal weight is between <strong class="ideal"></strong>.
+          </p>
+        </div>
+  
+        <div class="results-card placeholder">
+          <h3>Welcome!</h3>
+          <p>Enter your height and weight and you'll see your BMI results here.</p>
+        </div>
+        </form>
+    </header>
+  </div>
+  
 
-  Your BMI suggests you're <!-- add classification -->. 
-  Your ideal weight is between <!-- add range -->.
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+    
+  
 
   What your BMI result means
 
