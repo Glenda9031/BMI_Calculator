@@ -1,0 +1,35 @@
+/* Desktop */
+
+@media screen and (min-width: 1200px) {
+    /* Typography */
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    /* Header */
+    header {
+        height: 737px;
+    }
+
+    .header-details {
+        grid-column: 1 / 10;
+        grid-row: 1 / 12;
+        align-items: flex-start;
+        text-align: left
+    }
+
+    .header-details img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 24x;
+    }
+
+    form {
+        grid-column: 7 / 12;
+        grid-row: 4 / 11;
+    }
+}
