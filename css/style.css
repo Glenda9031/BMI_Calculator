@@ -83,6 +83,162 @@ p {
 
 /* Layout */
 
+.container {
+    width: 100%;
+    display: grid;
+    grid-row-gap: 72px;
+}
+
+header,
+.summary,
+.tips,
+.limits {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+header {
+    grid-template-rows: repeat(12, 1fr);
+    height: 1120px;
+}
+
+.bordered {
+    border-bottom: 2px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-details {
+    grid-column: 1 / 13;
+    grid-row: 1 / 8;
+    background: linear-gradient(290.1deg, #d6e6fe, rgba(214, 252, 254, 0) 100%);
+    border-radius: 0px 0px 35px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 32px 24px 0 24px;
+}
+
+.header-details img {
+    width: 40px;
+    height: 40px;
+}
+
+form {
+    grid-column: 2 / 12;
+    grid-row: 6 / 13;
+}
+
+img {
+    grid-column: span 12;
+    justify-self: center;
+    align-self: center;
+    overflow-wrap: break-word;
+}
+
+.eating {
+    grid-column: span 12;
+}
+
+.exercise {
+    grid-column: span 12;
+}
+
+.sleep {
+    grid-column: span 12;
+}
+
+.limits-text {
+    grid-column: span 12;
+}
+
+.gender {
+    grid-column: span 12;
+}
+
+.age {
+    grid-column: span 12;
+}
+
+.muscle {
+    grid-column: span 12;
+}
+
+.pregnancy {
+    grid-column: span 12;
+}
+
+.race {
+    grid-column: span 12;
+}
+
+/* Elements */
+
+/* Header styles */
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header-details h1,
+.header-details p {
+    max-width: 400px;
+}
+
+/* Custom radio styles */
+
+/* Hide radio styles */
+
+input[type="radio"] {
+    all: unset;
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOs < 15 to remove gradient background */
+    background-color: var(--color-white);
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+/* Style the custom radio unchecked state */
+
+input[type="radio"] {
+    background-color: var(--color-white);
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    min-width: 31px;
+    min-height: 31px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    /* This aligns our custom rado with hidden native one */
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--color-radio);
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+    background-color: var(--color-blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Desktop */
